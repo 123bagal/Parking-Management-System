@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vehicle Entry</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('entryimg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+    nav div a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav div a:hover {
+      color: #00c3ff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 85vh;
+      padding: 20px;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 12px 30px rgba(0,0,0,0.3);
+    }
+
+    .form-box h3 {
+      color: #28a745;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      text-align: left;
+      color: #444;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+    input[type="text"]:focus, select:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 6px rgba(40,167,69,0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #28a745, #00c851);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #218838, #009e3d);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      padding: 12px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    🚗 Parking Management System
+    <div>
+      <a href="index.html">Home</a>
+      <a href="exit.html">Vehicle Exit</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-box">
+      <h3>Register Vehicle Entry</h3>
+      <form method="post" action="php/entry.php">
+        <label>Plate Number</label>
+        <input type="text" name="plate" placeholder="Enter vehicle plate number" required>
+
+        <label>Vehicle Type</label>
+        <select name="vehicle_type">
+          <option value="car">🚘 Car</option>
+          <option value="bike">🏍️ Bike</option>
+          <option value="truck">🚚 Truck</option>
+        </select>
+
+        <label>Owner Name</label>
+        <input type="text" name="owner" placeholder="Enter owner name">
+
+        <button type="submit">Submit Entry</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Parking Management System
+  </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Parking Management System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    nav .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav .menu a:hover {
+      color: #00bfff;
+      transform: scale(1.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 65vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(65%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-text h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #00bfff;
+      padding: 12px 25px;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #008fcc;
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-card img {
+      width: 100%;
+      max-width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      color: #00bfff;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🚗 Parking Management</div>
+    <div class="menu">
+      <a href="entry.html">Vehicle Entry</a>
+      <a href="exit.html">Vehicle Exit</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="parkingarea.jpg" alt="Parking Area">
+    <div class="hero-text">
+      <h1>Smart Parking Made Easy</h1>
+      <p>Manage vehicle entry, exit, and reports all in one place.</p>
+      <a href="dashboard.html" class="btn">Go to Dashboard</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+        <img src="vehicleentry.png" alt="Entry" height="150" width="150">
+      <h3>Vehicle Entry</h3>
+      <p>Quickly record vehicle details at the entry gate with a simple form.</p>
+    </div>
+    <div class="feature-card">
+       <img src="vehicleexit.png" alt="Exit" height="150" width="150">
+      <h3>Vehicle Exit</h3>
+      <p>Track exit time and calculate charges automatically.</p>
+    </div>
+    <div class="feature-card">
+        <img src="dash1.jpg" alt="Dashboard" height="150" width="150">
+      <h3>Dashboard</h3>
+      <p>View parking availability, revenue reports, and real-time stats.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <p>© 2025 Parking Management System | <p>
+  </footer>
+</body>
+</html>

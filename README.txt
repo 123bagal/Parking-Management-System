@@ -1,0 +1,1 @@
+Import parking.sql into MySQL, place project in XAMPP/WAMP htdocs, access via http://localhost/parking-management-styled/index.html
